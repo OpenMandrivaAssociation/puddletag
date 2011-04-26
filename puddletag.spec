@@ -1,7 +1,8 @@
+%define pyqt 4.5
 Summary:        Feature rich, easy to use tag editor
 Name:           puddletag
 Version:        0.10.3
-Release:        %mkrel 1
+Release:        %mkrel 2
 Group:          Sound
 License:        GPLv2 and GPLv3+
 URL:            http://puddletag.sourceforge.net
@@ -11,7 +12,8 @@ BuildArch:      noarch
 BuildRequires:  python-setuptools
 Buildrequires:  desktop-file-utils
 # Dependencies on Python modules are not automatic yet.
-Requires:       python-qt4
+Requires:       python-qt4-gui >= %pyqt
+Requires:       python-qt4-svg >= %pyqt
 Requires:       python-parsing >= 1.5.1
 Requires:       mutagen
 Requires:       python-imaging
