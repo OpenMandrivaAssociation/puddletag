@@ -1,13 +1,13 @@
 %define pyqt 4.5
 Summary:        Feature rich, easy to use tag editor
 Name:           puddletag
-Version:        0.10.3
-Release:        %mkrel 2
+Version:        0.10.6
+Release:        %mkrel 1
 Group:          Sound
 License:        GPLv2 and GPLv3+
 URL:            http://puddletag.sourceforge.net
 Source0:        http://downloads.sourceforge.net/puddletag/puddletag-%{version}.tar.gz
-Patch0:         puddletag-0.9.11-xdg.patch
+Patch0:         puddletag-0.10.6-xdg.patch
 BuildArch:      noarch
 BuildRequires:  python-setuptools
 Buildrequires:  desktop-file-utils
@@ -63,6 +63,7 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/%{name}.desktop
 %defattr(-, root, root, -)
 %doc copyright HACKING NEWS README THANKS TODO 
 %{_bindir}/%{name}
+%_mandir/man1/%name.1*
 %{python_sitelib}/puddlestuff/
 %{python_sitelib}/%{name}-%{version}-py*.egg-info
 %{_datadir}/applications/%{name}.desktop
