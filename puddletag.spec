@@ -1,7 +1,7 @@
 %define pyqt 4.5
 Summary:        Feature rich, easy to use tag editor
 Name:           puddletag
-Version:        1.0.0
+Version:        1.0.1
 Release:        %mkrel 1
 Group:          Sound
 License:        GPLv2 and GPLv3+
