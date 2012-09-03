@@ -8,7 +8,6 @@ License:        GPLv2 and GPLv3+
 URL:            http://puddletag.sourceforge.net
 Source0:        http://downloads.sourceforge.net/puddletag/puddletag-%{version}.tar.gz
 Patch0:         puddletag-0.10.6-xdg.patch
-Patch1:		puddletag-1.0.0-fix-desktop-entry.patch
 BuildArch:      noarch
 BuildRequires:  python-setuptools
 Buildrequires:  desktop-file-utils
@@ -55,7 +54,10 @@ WavPack (wv).
 %install
 %{__rm} -rf %{buildroot}
 %{__python} setup.py install -O1 --skip-build --root %{buildroot}
-desktop-file-validate %{buildroot}%{_datadir}/applications/%{name}.desktop
+desktop-file-install --vendor="" \
+		     --add-category="Utility" \
+		     --dir %buildroot%_datadir/applications \
+		     %buildroot%_datadir/applications/*.desktop
 
 %clean
 %{__rm} -rf %{buildroot}
