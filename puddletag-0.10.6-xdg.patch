@@ -1,0 +1,11 @@
+--- puddletag-0.10.6/puddlestuff/tagmodel.py.orig	2011-06-04 16:15:40.000000000 +0200
++++ puddletag-0.10.6/puddlestuff/tagmodel.py	2011-06-08 10:05:00.000000000 +0200
+@@ -1282,7 +1282,7 @@ class TagTable(QTableView):
+             ('Show &row numbers', True),
+             ('Automatically resize columns to contents', False),
+             ('&Preserve file modification times (if supported)', True),
+-            ('Program to &play files with:', 'amarok -p')
++            ('Program to &play files with:', 'xdg-open')
+             ]
+ 
+         status['selectedrows'] = self._getSelectedRows
