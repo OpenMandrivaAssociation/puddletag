@@ -72,3 +72,35 @@ desktop-file-install --vendor="" \
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/pixmaps/%{name}.png
 
+
+
+%changelog
+* Mon Sep 03 2012 Götz Waschk <waschk@mandriva.org> 1.0.1-1mdv2012.0
++ Revision: 816249
+- fix desktop entry
+- update to new version 1.0.1
+
+* Fri Aug 24 2012 Götz Waschk <waschk@mandriva.org> 1.0.0-1
++ Revision: 815662
+- new version
+- fix desktop entry
+- update file list
+
+* Fri Aug 26 2011 Götz Waschk <waschk@mandriva.org> 0.10.6.3-1
++ Revision: 697162
+- update to new version 0.10.6.3
+
+* Wed Jun 08 2011 Götz Waschk <waschk@mandriva.org> 0.10.6-1
++ Revision: 683199
+- new version
+- rediff the patch
+- add man page
+
+* Tue Apr 26 2011 Götz Waschk <waschk@mandriva.org> 0.10.3-2
++ Revision: 659240
+- reduce python-qt4 deps
+
+* Sun Apr 24 2011 Götz Waschk <waschk@mandriva.org> 0.10.3-1
++ Revision: 658363
+- import puddletag
+
