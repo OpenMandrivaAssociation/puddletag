@@ -2,7 +2,7 @@
 Summary:        Feature rich, easy to use tag editor
 Name:           puddletag
 Version:        1.0.1
-Release:        %mkrel 1
+Release:        2
 Group:          Sound
 License:        GPLv2 and GPLv3+
 URL:            http://puddletag.sourceforge.net
