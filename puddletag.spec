@@ -43,7 +43,7 @@ WavPack (wv).
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 %{__chmod} 0644 NEWS
 %{__sed} -i  '/^#![ ]*\/usr\/bin\/env/d' \
     puddlestuff/{webdb,puddlesettings,puddletag,puddleobjects,releasewidget}.py
