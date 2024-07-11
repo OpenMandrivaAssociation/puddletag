@@ -1,25 +1,15 @@
-%define pyqt 4.5
 Summary:        Feature rich, easy to use tag editor
 Name:           puddletag
-Version:        1.0.3
+Version:        1.0.5
 Release:        1
 Group:          Sound
 License:        GPLv2 and GPLv3+
 URL:            http://puddletag.sourceforge.net
-Source0:        http://downloads.sourceforge.net/puddletag/puddletag-%{version}.tar.gz
+Source0:        https://downloads.sourceforge.net/project/puddletag/puddletag-%{version}.tar.gz
 Patch0:         puddletag-0.10.6-xdg.patch
 BuildArch:      noarch
 BuildRequires:  python-setuptools
-Buildrequires:  desktop-file-utils
-# Dependencies on Python modules are not automatic yet.
-Requires:       python-qt4-gui >= %pyqt
-Requires:       python-qt4-svg >= %pyqt
-Requires:       python-parsing >= 1.5.1
-Requires:       mutagen
-Requires:       python-imaging
-Requires:       python-configobj
-Requires:       python-musicbrainz2 
-#Requires:       quodlibet
+BuildRequires:  desktop-file-utils
 
 %description
 Puddletag is an audio tag editor.
@@ -42,11 +32,12 @@ VorbisComments (ogg, flac), Musepack (mpc), Monkey's Audio (.ape) and
 WavPack (wv).
 
 %prep
-%setup -q
-%autopatch -p1
+%autosetup -p1
 %{__chmod} 0644 NEWS
 %{__sed} -i  '/^#![ ]*\/usr\/bin\/env/d' \
     puddlestuff/{webdb,puddlesettings,puddletag,puddleobjects,releasewidget}.py
+
+find . -name "*.py" |xargs 2to3 -w
 
 %build
 %{__python} setup.py build
