@@ -4,7 +4,7 @@ Version:        1.0.5
 Release:        1
 Group:          Sound
 License:        GPLv2 and GPLv3+
-URL:            http://puddletag.sourceforge.net
+URL:            https://puddletag.sourceforge.net
 Source0:        https://downloads.sourceforge.net/project/puddletag/puddletag-%{version}.tar.gz
 Patch0:         puddletag-0.10.6-xdg.patch
 BuildArch:      noarch
